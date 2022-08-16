@@ -32,11 +32,11 @@ class Dao{
         '<table>
         <tr>
         <td width=40% class="text-left">
-        <p style="display: block"><a href="#modalExemplo" style="color: black" data-toggle="modal" data-target="#modalExemplo' . $row['id_camp'] . '">' . $row['camp1'] . '</a></p>
+        <p style="display: block"><a href="#modalExemplo" style="color: black" data-toggle="modal" data-target="#modalExemplo' . $row['id_camp'] . '">' . $row['nome_prod'] . '</a></p>
         </td>
 
         <th class="text-left">
-        <p> Qtde: ' . $row['camp2'] . '</p>
+        <p> Qtde: ' . $row['quantidade'] . '</p>
         </th>
 
         <td class="text-right">
@@ -63,7 +63,7 @@ class Dao{
               </div>
 
               <div class="modal-body">
-                Você tem Certeza que deseja apagar este cliente? <h3>  Nº ' . $row['id_camp'] . ' - ' . $row['camp1'] . '</h3>
+                Você tem Certeza que deseja apagar este cliente? <h3>  Nº ' . $row['id_camp'] . ' - ' . $row['nome_prod'] . '</h3>
               </div>
 
               <div class="modal-footer">
@@ -100,12 +100,11 @@ class Dao{
                       <div class="col-sm-12">
                         <p>' . $row['id_camp'] . '</p>
                       </div>
-s
                   </div>
 
                   <div class="form-group text-left">
                       <div class="col-sm-12">NOME DO PRODUTO 
-                      <p>' . $row['camp1'] . '</p>
+                      <p>' . $row['nome_prod'] . '</p>
                       </div>
                   </div>
 
@@ -113,7 +112,7 @@ s
                       <label class="control-label col-sm-4" for="cidade">QUANTIDADE EM ESTOQUE </label>
 
                       <div class="col-sm-12">
-                        <p>' . $row['camp2'] . '</p>
+                        <p>' . $row['quantidade'] . '</p>
                       </div>
 
                   </div>
@@ -122,7 +121,7 @@ s
                       <label class="control-label col-sm-4" for="descricao">VALOR UNITÁRIO</label>
 
                       <div class="col-sm-12"> 
-                        <p>' . $row['camp3'] . '</p>
+                        <p>' . $row['valor_unitario'] . '</p>
                       </div>
 
                   </div>
@@ -147,10 +146,10 @@ s
     }
   }
 
-  public function insertInfo($camp1, $camp2, $camp3)
+  public function insertInfo($nome_prod, $quantidade, $valor_unitario)
   {
-    $stmt = $this->mysql->prepare("INSERT INTO informacoes (camp1, camp2, camp3) VALUES (?,?,?)");
-    $stmt->bind_param("sss", $camp1, $camp2, $camp3);
+    $stmt = $this->mysql->prepare("INSERT INTO informacoes (nome_prod, quantidade, valor_unitario) VALUES (?,?,?)");
+    $stmt->bind_param("sss", $nome_prod, $quantidade, $valor_unitario);
     if ($stmt->execute() == TRUE) {
       header('Location: ../view/painel.php');
     } else {

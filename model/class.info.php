@@ -10,23 +10,23 @@ Class Info extends Dao{
 
 
 
-    public function setCamp1($camp1){
+    public function setCamp1($nome_prod){
         $this->camp1 = $camp1;
     }
     public function getCamp1(){
-        return $this->camp1;
+        return $this->nome_prod;
     }
-    public function setCamp2($camp2){
-        $this->camp2 = $camp2;
+    public function setCamp2($quantidade){
+        $this->camp2 = $quantidade;
     }
     public function getCamp2(){
-        return $this->camp2;
+        return $this->quantidade;
     }
-    public function setCamp3($camp3){
-        $this->camp3 = $camp3;
+    public function setCamp3($valor_unitario){
+        $this->camp3 = $valor_unitario;
     }
     public function getCamp3(){
-        return $this->camp3;
+        return $this->valor_unitario;
     }
 }
 ?>

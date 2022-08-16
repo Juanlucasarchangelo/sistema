@@ -12,16 +12,16 @@ class ControllerInfo
     public function getTodosFunc()
     {
         $this->obj->conexao();
-        $this->obj->getInfo();//Info
+        $this->obj->getInfo();
     }
 
-    public function setInfo($camp1, $camp2, $camp3)//Info
+    public function setInfo($nome_prod, $quantidade, $valor_unitario)
     {
-        $this->obj->insertInfo($camp1, $camp2, $camp3);
+        $this->obj->insertInfo($nome_prod, $quantidade, $valor_unitario);
     }
-    public function updateInfo($id_camp, $camp1, $camp2, $camp3)
+    public function updateInfo($id_camp, $nome_prod, $quantidade, $valor_unitario)
     {
-        $this->obj->updateInfo($id_camp, $camp1, $camp2, $camp3);
+        $this->obj->updateInfo($id_camp, $nome_prod, $quantidade, $valor_unitario);
     }
     public function deleteInfo($id_camp)
     {
@@ -32,10 +32,10 @@ class ControllerInfo
 $objControl = new ControllerInfo();
 if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['_incluir']) && $_POST['_incluir'] == "_incluir") {
-        $objControl->setInfo($_POST['camp1'], $_POST['camp2'], $_POST['camp3']);
+        $objControl->setInfo($_POST['nome_prod'], $_POST['quantidade'], $_POST['valor_unitario']);
 
     } else if (isset($_POST['_update']) && $_POST['_update'] == "_update") {
-        $objControl->updateInfo($_POST['id_camp'], $_POST['camp1'], $_POST['camp2'], $_POST['camp3']);
+        $objControl->updateInfo($_POST['id_camp'], $_POST['nome_prod'], $_POST['quantidade'], $_POST['valor_unitario']);
     }
 }
 if (isset($_GET['id_camp'])) {

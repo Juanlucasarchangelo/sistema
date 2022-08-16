@@ -36,18 +36,18 @@ session_start();
 
             <div class="form-row">
               <div class="form-group col-md-4">
-                <input required type="text" class="form-control" id="camp1" name="camp1" placeholder="Nome do produto">
+                <input required type="text" class="form-control" id="nome_prod" name="nome_prod" placeholder="Nome do produto">
               </div>
 
               <!-- Empresa -->
 
               <div class="form-group col-md-4">
-                <input required type="number" class="form-control" id="camp2" name="camp2" placeholder="Quantidade em estoque">
+                <input required type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade em estoque">
               </div>
 
               <!-- Site -->
 
-              <div class="fo rm-group col-md-4"> <input required type="text" class="form-control" id="camp3" name="camp3" placeholder="Valor unitário"> </div>
+              <div class="fo rm-group col-md-4"> <input required type="text" class="form-control" id="valor_unitario" name="valor_unitario" placeholder="Valor unitário"> </div>
             </div>
 
             <!-- E n v i a r - e - L i m p a r -->
