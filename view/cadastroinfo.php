@@ -8,11 +8,11 @@ session_start();
 
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
-  <title>Cadastro de Clientes</title>
+  <title>Cadastro de Produtos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="estilo/estilo.css">
-  <link rel="shortcut icon" href="img/cropped-click-2-scaled-1.jpg">
+  <link rel="shortcut icon" href="img/Logo site preto.png">
 </head>
 
 <body class="bg-dark">
@@ -26,40 +26,28 @@ session_start();
     <div class="container">
       <div class="row">
         <div class="mx-auto col-md-10 p-4">
-          <h1 class="text-light">Cadastro de Clientes</h1>
+          <h1 class="text-light">Cadastro de Produtos</h1>
           <br>
           <!-- F o r m u l a r i o -->
 
           <form id="formCadastro" name="formCadastro" action="../controller/controllerInfo.php" method="POST">
 
-            <!-- Nome do cliente-->
+            <!-- Nome do Produto-->
 
             <div class="form-row">
               <div class="form-group col-md-4">
-                <input required type="text" class="form-control" id="camp1" name="camp1" placeholder="Nome do cliente">
+                <input required type="text" class="form-control" id="camp1" name="camp1" placeholder="Nome do produto">
               </div>
 
               <!-- Empresa -->
 
               <div class="form-group col-md-4">
-                <input required type="text" class="form-control" id="camp2" name="camp2" placeholder="Domínio">
+                <input required type="number" class="form-control" id="camp2" name="camp2" placeholder="Quantidade em estoque">
               </div>
 
               <!-- Site -->
 
-              <div class="fo rm-group col-md-4"> <input required type="text" class="form-control" id="camp3" name="camp3" placeholder="Data de Inicio do Cliente"> </div>
-            </div>
-
-            <!-- Data de Inicio do job -->
-
-            <div class="form-group">
-              <input required type="text" class="form-control" id="camp4" name="camp4" placeholder="E-mails">
-            </div>
-
-            <!-- E-mail -->
-
-            <div class="form-group">
-              <textarea required class="form-control" id="camp5" name="camp5" rows="4" maxlength="50" placeholder="Endereço Loja Virtual"></textarea>
+              <div class="fo rm-group col-md-4"> <input required type="text" class="form-control" id="camp3" name="camp3" placeholder="Valor unitário"> </div>
             </div>
 
             <!-- E n v i a r - e - L i m p a r -->
