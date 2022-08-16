@@ -19,7 +19,7 @@ session_start();
 
   <!-- I m a g e m - e - F o r m u l á r i o -->
 
-  <div class="text-center text-white py-5 my-5" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+  <div class="text-center text-white py-5 my-5">
 
     <!-- Á r e a - d o - F o r m u l á r i o -->
 
