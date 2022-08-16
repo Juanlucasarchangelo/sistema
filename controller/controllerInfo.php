@@ -27,6 +27,7 @@ class ControllerInfo
     {
         $this->obj->delete_Info($id_camp);
     }
+
 }
 $objControl = new ControllerInfo();
 if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == "POST") {

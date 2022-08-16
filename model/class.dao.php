@@ -36,7 +36,7 @@ class Dao{
         </td>
 
         <th class="text-left">
-        <p><a href="https://' . $row['camp2'] . '" style="color: #0087A5" target="blank">' . $row['camp2'] . '</a></p>
+        <p> Qtde: ' . $row['camp2'] . '</p>
         </th>
 
         <td class="text-right">
@@ -97,16 +97,15 @@ class Dao{
                   <div class="form-group text-left">
                     <h1>Informações do Produto</h1><hr>
                       <label class="control-label col-sm-4" for="id_emp">ID Produto </label>
-
                       <div class="col-sm-12">
-                        <input type="text" class="form-control" id="id_camp" name="id_camp" value="' . $row['id_camp'] . '">
+                        <p>' . $row['id_camp'] . '</p>
                       </div>
 
                   </div>
 
                   <div class="form-group text-left">
-                      <div class="col-sm-12">
-                      NOME DO PRODUTO <input type="text" class="form-control" id="camp1" name="camp1" value="' . $row['camp1'] . '">
+                      <div class="col-sm-12">NOME DO PRODUTO 
+                      <p>' . $row['camp1'] . '</p>
                       </div>
                   </div>
 
@@ -114,7 +113,7 @@ class Dao{
                       <label class="control-label col-sm-4" for="cidade">QUANTIDADE EM ESTOQUE </label>
 
                       <div class="col-sm-12">
-                        <input type="number" class="form-control" id="camp2" name="camp2" value="' . $row['camp2'] . '">
+                        <p>' . $row['camp2'] . '</p>
                       </div>
 
                   </div>
@@ -123,20 +122,7 @@ class Dao{
                       <label class="control-label col-sm-4" for="descricao">VALOR UNITÁRIO</label>
 
                       <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp3" name="camp3" value="' . $row['camp3'] . '">
-                      </div>
-
-                  </div>
-
-                  <div class="form-group"> 
-
-                      <div class="col-sm-offset-2 col-sm-12 text-center">
-
-                        <a href="painel.php">
-                          <button class="btn btn-info">Voltar</button>
-                        </a>
-                        <button type="submit" class="btn btn-success font-weight-bold">Atualizar</button>
-
+                        <p>' . $row['camp3'] . '</p>
                       </div>
 
                   </div>
@@ -171,28 +157,16 @@ class Dao{
       header('Location: ../view/error.php');
     }
   }
-  public function insertAluno($nome, $sobrenome, $email, $telefone, $cidade, $curso, $curriculo, $senha, $rm, $data_nasc)
+  public function insertAluno($nome, $email, $senha)
   {
-    $stmt = $this->mysql->prepare("INSERT INTO aluno (nome, sobrenome, email, telefone, cidade, curso, curriculo, senha, rm, data_nasc) VALUES (?,?,?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("ssssssssss", $nome, $sobrenome, $email, $telefone, $cidade, $curso, $curriculo, $senha, $rm, $data_nasc);
+    $stmt = $this->mysql->prepare("INSERT INTO aluno (nome, email, senha) VALUES (?,?,?)");
+    $stmt->bind_param("ssssssssss", $nome, $email, $senha);
     if ($stmt->execute() == TRUE) {
       header('Location: ../view/login.php');
     } else {
       header('Location: ../view/erro.php');
     }
   }
-  public function updateInfo($id_camp, $camp1, $camp2, $camp3)
-  {
-    $stmt = $this->mysql->prepare("UPDATE informacoes SET camp1=?,  camp2=?, camp3=?, camp4=?, camp5=?, camp6=?, camp7=?, camp8=?, camp9=?, camp10=?, camp11=?, camp12=?, camp13=?, camp14=?, camp15=?, camp16=?, camp17=?, camp18=?, camp19=?, camp20=?, camp21=?, camp22=?, camp23=?, camp24=? WHERE id_camp=?");
-    $stmt->bind_param("sss", $camp1, $camp2, $camp3);
-
-    if ($stmt->execute() == TRUE) {
-      header('Location: ../view/painel.php');
-    } else {
-      header('Location: ../view/erro.php');
-    }
-  }
-
   public function getFuncId($id_camp)
   {
     $result = $this->mysql->query(
