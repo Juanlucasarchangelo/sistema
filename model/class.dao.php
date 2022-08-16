@@ -85,7 +85,7 @@ class Dao{
             <div class="modal-content">
 
               <div class="modal-header">
-                <h5 class="modal-title" bg-success id="exampleModalLabel">Alterar Informações</h5>
+                <h5 class="modal-title" bg-success id="exampleModalLabel">Visualizar Informações</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -95,8 +95,8 @@ class Dao{
                 <form class="form-horizontal" action="../controller/controllerInfo.php" method="POST">
 
                   <div class="form-group text-left">
-                    <h1>Informações do Cliente</h1><hr>
-                      <label class="control-label col-sm-4" for="id_emp">ID CLIENTE </label>
+                    <h1>Informações do Produto</h1><hr>
+                      <label class="control-label col-sm-4" for="id_emp">ID Produto </label>
 
                       <div class="col-sm-12">
                         <input type="text" class="form-control" id="id_camp" name="id_camp" value="' . $row['id_camp'] . '">
@@ -106,196 +106,24 @@ class Dao{
 
                   <div class="form-group text-left">
                       <div class="col-sm-12">
-                      NOME DO CLIENTE <input type="text" class="form-control" id="camp1" name="camp1" value="' . $row['camp1'] . '">
+                      NOME DO PRODUTO <input type="text" class="form-control" id="camp1" name="camp1" value="' . $row['camp1'] . '">
                       </div>
                   </div>
 
                   <div class="form-group text-left">
-                      <label class="control-label col-sm-4" for="cidade">DOMÍNIO </label>
+                      <label class="control-label col-sm-4" for="cidade">QUANTIDADE EM ESTOQUE </label>
 
                       <div class="col-sm-12">
-                        <input type="textarea" class="form-control" id="camp2" name="camp2" value="' . $row['camp2'] . '">
+                        <input type="number" class="form-control" id="camp2" name="camp2" value="' . $row['camp2'] . '">
                       </div>
 
                   </div>
 
                   <div class="form-group text-left">
-                      <label class="control-label col-sm-4" for="descricao">DATA DE INIÇIO DO CLIENTE </label>
+                      <label class="control-label col-sm-4" for="descricao">VALOR UNITÁRIO</label>
 
                       <div class="col-sm-12"> 
-                        <input type="date" class="form-control" id="camp3" name="camp3" value="' . $row['camp3'] . '">
-                      </div>
-
-                  </div>
-
-                  <div class="form-group text-left">
-                  <h1>E-mails</h1><hr>
-                      <label class="control-label col-sm-4" for="vaga">LINK DE ACESSO</label>
-                      <div class="col-sm-12">
-                        <input type="text" class="form-control" id="camp24" name="camp24" value="' . $row['camp24'] . '">
-                      </div>
-                      <label class="control-label col-sm-4" for="vaga">E-MAILS </label>
-                      <div class="col-sm-12">
-                        <textarea class="form-control" id="camp4" rows="10" name="camp4" value="">' . $row['camp4'] . '</textarea>
-                      </div>
-
-                  </div>
-
-                  <div class="form-group text-left">
-                  <h1>Loja Virtual</h1><hr>
-                      <label class="control-label col-sm-4" for="remuneracao">ENDEREÇO LOJA VIRTUAL </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp5" name="camp5" value="' . $row['camp5'] . '">
-                        <input type="hidden" id="_update" name="_update" value="_update">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">FORMAS DE ACESSO </label>
-
-                      <div class="col-sm-12">
-                        <textarea class="form-control" id="camp6" rows="2" name="camp6" value="">' . $row['camp6'] . '</textarea> 
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <h1>Redes Sociais</h1><hr>
-                      <label class="control-label col-sm-4" for="remuneracao">DRIVE</label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp7" rows="2" name="camp7">' . $row['camp7'] . '</textarea> 
-                        <input type="hidden" id="_update" name="_update" value="_update">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">YOUTUBE </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp8" rows="2" name="camp8">' . $row['camp8'] . '</textarea> 
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">FACEBOOK </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp9" rows="2" name="camp9">' . $row['camp9'] . '</textarea>
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">LINKEDIN </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp20" rows="2" name="camp20">' . $row['camp20'] . '</textarea>
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">GMAIL </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp21" rows="2" name="camp21">' . $row['camp21'] . '</textarea>
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">INSTAGRAM </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp10" rows="2" name="camp10">' . $row['camp10'] . '</textarea> 
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">LINKETREE </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp22" rows="2" name="camp22">' . $row['camp22'] . '</textarea>
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">INFO ADICIONAIS </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp23" rows="5" name="camp23">' . $row['camp23'] . '</textarea>
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <h1>Informações do Site</h1><hr>
-                      <label class="control-label col-sm-4" for="remuneracao">DATA SITE NO AR </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="date" class="form-control" id="camp11" name="camp11" value="' . $row['camp11'] . '">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">DADOS DO REGISTRO BR </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp12" rows="5" name="camp12">' . $row['camp12'] . '</textarea>
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">LOCAL DE HOSPEDAGEM </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp13" name="camp13" value="' . $row['camp13'] . '">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">DNS PRIMÁRIO </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp14" name="camp14" value="' . $row['camp14'] . '">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">DNS SECUNDÁRIO </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp15" name="camp15" value="' . $row['camp15'] . '">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">ENDEREÇO FTP </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp16" name="camp16" value="' . $row['camp16'] . '">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">USUÁRIO FTP </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp17" name="camp17" value="' . $row['camp17'] . '">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">SENHA FTP </label>
-
-                      <div class="col-sm-12"> 
-                        <input type="text" class="form-control" id="camp18" name="camp18" value="' . $row['camp18'] . '">
-                      </div>
-
-                  </div>
-                  <div class="form-group text-left">
-                  <label class="control-label col-sm-4" for="descricao">PAINEL DE CONTROLE DO SITE </label>
-
-                      <div class="col-sm-12"> 
-                        <textarea class="form-control" id="camp19" rows="5" name="camp19" value="">' . $row['camp19'] . '</textarea>
-                        <input type="hidden" id="_update" name="_update" value="_update">
+                        <input type="text" class="form-control" id="camp3" name="camp3" value="' . $row['camp3'] . '">
                       </div>
 
                   </div>
