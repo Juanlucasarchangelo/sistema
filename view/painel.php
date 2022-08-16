@@ -97,7 +97,7 @@ if(!$_SESSION['usuario']){
 
       <div class="row">
         <div class="col-md-12 text-center">
-          <p class="mb-2">Click Comunicação © 2021 - Todos os direitos reservados</p>
+          <p class="mb-2">Juan archangelo © 2022 - Todos os direitos reservados</p>
         </div>
       </div>
     </div>

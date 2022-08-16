@@ -36,8 +36,8 @@ unset($_SESSION['nao_autenticado']);
   <input type="text" name="usuario" placeholder="Usuario">
   <input type="password" name="senha" placeholder="Senha">
   <input type="submit" name="Enviar" value="Login">
+  <p><a href="http://localhost/Sistema/view/cadastro.php">Realizar cadastro</a></p>
 </form>
-
 
   </body>
 </html>

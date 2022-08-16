@@ -186,4 +186,16 @@ class Dao{
       header('Location: ../view/painel.php');
     }
   }
+  
+  public function insertUser($nome,$email,$senha){
+    $senha = md5($senha);
+  $stmt = $this->mysql->prepare("INSERT INTO usuario (nome, email, senha) VALUES (?,?,?)");
+    $stmt->bind_param("sss",$nome,$email,$senha);
+    if( $stmt->execute() == TRUE){
+        header('Location: ../index.php');
+    }else{
+        header('Location: ../view/index.php');
+    }
+
+}
 }

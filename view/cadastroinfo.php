@@ -39,13 +39,13 @@ session_start();
                 <input required type="text" class="form-control" id="nome_prod" name="nome_prod" placeholder="Nome do produto">
               </div>
 
-              <!-- Empresa -->
+              <!-- Quantidade -->
 
               <div class="form-group col-md-4">
                 <input required type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade em estoque">
               </div>
 
-              <!-- Site -->
+              <!-- Valo Unitário -->
 
               <div class="fo rm-group col-md-4"> <input required type="text" class="form-control" id="valor_unitario" name="valor_unitario" placeholder="Valor unitário"> </div>
             </div>

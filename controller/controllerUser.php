@@ -20,7 +20,7 @@ Class ControllerUser{
     }
    
 }
-$objControl = new ControllerAluno();
+$objControl = new ControllerUser();
 if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == "POST"){
     if(isset($_POST['_incluir']) && $_POST['_incluir'] == "_incluir"){
             $objControl->setUser($_POST['nome'], $_POST['email'], $_POST['senha']);
