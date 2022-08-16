@@ -161,10 +161,10 @@ class Dao{
     }
   }
 
-  public function insertInfo($camp1, $camp2, $camp3, $camp4, $camp5)
+  public function insertInfo($camp1, $camp2, $camp3)
   {
-    $stmt = $this->mysql->prepare("INSERT INTO informacoes (camp1, camp2, camp3, camp4, camp5) VALUES (?,?,?,?,?)");
-    $stmt->bind_param("sssss", $camp1, $camp2, $camp3, $camp4, $camp5);
+    $stmt = $this->mysql->prepare("INSERT INTO informacoes (camp1, camp2, camp3) VALUES (?,?,?)");
+    $stmt->bind_param("sss", $camp1, $camp2, $camp3);
     if ($stmt->execute() == TRUE) {
       header('Location: ../view/painel.php');
     } else {
@@ -181,34 +181,11 @@ class Dao{
       header('Location: ../view/erro.php');
     }
   }
-  public function updateInfo($id_camp, $camp1, $camp2, $camp3, $camp4, $camp5, $camp6, $camp7, $camp8, $camp9, $camp10, $camp11, $camp12, $camp13, $camp14, $camp15, $camp16, $camp17, $camp18, $camp19, $camp20, $camp21, $camp22, $camp23, $camp24)
+  public function updateInfo($id_camp, $camp1, $camp2, $camp3)
   {
     $stmt = $this->mysql->prepare("UPDATE informacoes SET camp1=?,  camp2=?, camp3=?, camp4=?, camp5=?, camp6=?, camp7=?, camp8=?, camp9=?, camp10=?, camp11=?, camp12=?, camp13=?, camp14=?, camp15=?, camp16=?, camp17=?, camp18=?, camp19=?, camp20=?, camp21=?, camp22=?, camp23=?, camp24=? WHERE id_camp=?");
-    $stmt->bind_param("sssssssssssssssssssssssss", $camp1, $camp2, $camp3, $camp4, $camp5, $camp6, $camp7, $camp8, $camp9, $camp10, $camp11, $camp12, $camp13, $camp14, $camp15, $camp16, $camp17, $camp18, $camp19, $camp20, $camp21, $camp22, $camp23, $camp24, $id_camp);
-    /*var_dump ($camp1);
-    var_dump ($camp2);
-    var_dump ($camp3);
-    var_dump ($camp4);
-    var_dump ($camp5);
-    var_dump ($camp6);
-    var_dump ($camp7);
-    var_dump ($camp8);
-    var_dump ($camp9);
-    var_dump ($camp10);
-    var_dump ($camp11);
-    var_dump ($camp12);
-    var_dump ($camp13);
-    var_dump ($camp14);
-    var_dump ($camp15);
-    var_dump ($camp16);
-    var_dump ($camp17);
-    var_dump ($camp18);
-    var_dump ($camp19);
-    var_dump ($camp20);
-    var_dump ($camp21);
-    var_dump ($camp22);
-    var_dump ($camp23);
-    var_dump ($camp24);*/
+    $stmt->bind_param("sss", $camp1, $camp2, $camp3);
+
     if ($stmt->execute() == TRUE) {
       header('Location: ../view/painel.php');
     } else {
