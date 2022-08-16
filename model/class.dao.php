@@ -100,7 +100,7 @@ class Dao{
                       <div class="col-sm-12">
                         <p>' . $row['id_camp'] . '</p>
                       </div>
-
+s
                   </div>
 
                   <div class="form-group text-left">
