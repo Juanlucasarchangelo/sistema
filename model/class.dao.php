@@ -77,7 +77,7 @@ class Dao{
 
         </div> 
 
-        <!-- Modal alterar cliente -->
+        <!-- Modal Produto -->
         <div class="modal fade modal fade bd-exemple-modal-xl" id="modalExemplo' . $row['id_camp'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
           <div class="modal-dialog modal-xl" role="document">
@@ -156,30 +156,6 @@ class Dao{
       header('Location: ../view/error.php');
     }
   }
-  public function insertAluno($nome, $email, $senha)
-  {
-    $stmt = $this->mysql->prepare("INSERT INTO aluno (nome, email, senha) VALUES (?,?,?)");
-    $stmt->bind_param("ssssssssss", $nome, $email, $senha);
-    if ($stmt->execute() == TRUE) {
-      header('Location: ../view/login.php');
-    } else {
-      header('Location: ../view/erro.php');
-    }
-  }
-  public function getFuncId($id_camp)
-  {
-    $result = $this->mysql->query(
-      "SELECT * FROM informacoes WHERE id_camp = '" . $id_camp . "'"
-    );
-    if ($result->num_rows > 0) {
-      while ($row = $result->fetch_array()) {
-        $array[] = $row;
-      }
-      return $array;
-    } else {
-      return $erro = false;
-    }
-  }
   public function delete_Info($id_camp)
   {
     if ($this->mysql->query("DELETE FROM informacoes WHERE id_camp = '" . $id_camp . "'")) {
@@ -196,6 +172,5 @@ class Dao{
     }else{
         header('Location: ../view/index.php');
     }
-
 }
 }
