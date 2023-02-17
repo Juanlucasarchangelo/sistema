@@ -1,4 +1,4 @@
-<h1>Sistema de Gerenciamento de Estoque</h1>
+<h1>Sistema de Gerenciamento</h1>
 
 <h2>Link direto</h2>
 
