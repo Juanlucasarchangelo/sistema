@@ -1,33 +1,20 @@
+
 <?php
 
-//timezone
+$bd = 0;
 
-date_default_timezone_set('America/Sao_Paulo');
-
-// conexão com o banco de dados
-//define define uma constante
-//nome ou ip servidor de banco de dados
-define('BD_SERVIDOR','localhost');
-//usuario para acesso ao BD
-define('BD_USUARIO','root');
-//senha de acesso ao BD
-define('BD_SENHA','');
-//nome do banco de dados
-define('BD_BANCO','sistema');
-
-/*//timezone
-
-date_default_timezone_set('America/Sao_Paulo');
-
-// conexão com o banco de dados
-//define define uma constante
-//nome ou ip servidor de banco de dados
-define('BD_SERVIDOR','localhost');
-//usuario para acesso ao BD
-define('BD_USUARIO','root');
-//senha de acesso ao BD
-define('BD_SENHA','');
-//nome do banco de dados
-define('BD_BANCO','sistema');*/
+if($bd == 1){
+    date_default_timezone_set('America/Sao_Paulo');
+    define('BD_SERVIDOR','localhost');
+    define('BD_USUARIO','clickm67_user');
+    define('BD_SENHA','Click123@mkt');
+    define('BD_BANCO','clickm67_sistema');
+} else {
+    date_default_timezone_set('America/Sao_Paulo');
+    define('BD_SERVIDOR','localhost');
+    define('BD_USUARIO','root');
+    define('BD_SENHA','');
+    define('BD_BANCO','sistema');
+}
 
 ?>
